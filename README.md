@@ -18,6 +18,8 @@ W pliku "project_1_data_preparation" zakomentowana została przy przetwarzaniu d
 
 W pliku głównym "project_1_recommender_and_evaluation" wykonano następujące działania:
 - podzadanie z dodaniem negatywnych interakcji
+- podstawowe prace przy user_features
+- podstawowe prace przy item_features
 
 Zasadnicze składowe projektu:
 Dwa pliki typu Jupyter Notebook:
