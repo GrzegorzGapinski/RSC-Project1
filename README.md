@@ -14,3 +14,31 @@ Pierwszym zadaniem było wykonanie wstępnej obróbki danych. W jej ramach udał
 - napisać metodę dzielącą dostępne pokoje na kategorie (buckety) w zależności od średniej ceny za noc
 
 Nie udało się niestety napisać do końca poprawnie działającej metody agregującej rezerwacje grupowe. Jej poszczególne składowe wydają się działać poprawnie, jednak na etapie ponownego scalania danych zagregowanych według różnych kryteriów pojawia się problem. Powstały DataFrame wygląda poprawnie, jednak zarówno opisane powyżej metody, jak i część metod predefiniowanych nie działają, przyjmując go jako argument. Z tego względu, nie udało się do końca obrobić danych, zaliczyć wszystkich assertów i stworzyć działającego rekomendera.
+W pliku "project_1_data_preparation" zakomentowana została przy przetwarzaniu danych linijka wywołująca agregację dla rezerwacji grupowych oraz te asserty, które przez jej brak nie były spełnione. Ma to na celu pokazanie, że pozostałe metody działają poprawnie. Jednocześnie, dodana została prezentacja DataFrame'a powstałego w wyniku zastosowania metody agregującej.
+
+W pliku głównym "project_1_recommender_and_evaluation" wykonano następujące działania:
+- podzadanie z dodaniem negatywnych interakcji
+
+Zasadnicze składowe projektu:
+Dwa pliki typu Jupyter Notebook:
+- project_1_data_preparation.ipynb,
+- project_1_recommender_and_evaluation.ipynb,
+
+Pliki do wstępnego przetworzenia danych:
+- data_preprocessing/data_preprocessing_toolkit.py,
+- data_preprocessing/dataset_specification.py.py,
+- data_preprocessing/people_identifier.py.py,
+
+Plik z danymi:
+data/hotel_data/hotel_data_original.csv.
+
+Dodatkowo załączone są również pliki zapożyczone z repozytorium zajęć z systemów rekomendacyjnych oraz wersje HTML obydwu notebooków.
+
+Wymagane pakiety (instalowane poprzez wpisanie w wierszu poleceń "pip install <nazwa_pakietu>"):
+- numpy
+- pandas
+- matplotlib.pyplot
+- seaborn
+- notebook
+
+Aby uruchomić projekt, w wierszu poleceń, w folderze, w którym znajduje się projekt, wpisujemy komendę "jupyter notebook". Jupyter uruchomi się w przeglądarce i będziemy mieli możliwość otwarcia interesującego nas pliku.
