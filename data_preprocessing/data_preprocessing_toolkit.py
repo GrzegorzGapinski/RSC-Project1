@@ -280,13 +280,13 @@ class DataPreprocessingToolkit(object):
         display(gr_grouped_mean.head(10))
         display(gr_grouped_mode.head(10))
         display(gr_grouped_first.head(10))
-        
+        """
         #group_reservations_merged = pd.merge(gr_grouped_sum, gr_grouped_mean, gr_grouped_mode, gr_grouped_first, on='group_id')
         group_reservations_merged = pd.merge(gr_grouped_sum, gr_grouped_mean, on='group_id')
         group_reservations_merged = pd.merge(group_reservations_merged, gr_grouped_mode, on='group_id')
         group_reservations_merged = pd.merge(group_reservations_merged, gr_grouped_first, on='group_id')
         group_reservations_merged = pd.merge(group_reservations_merged, grouped_res_id, on='group_id', how='left')
-        
+        """
         group_reservations_merged = pd.concat([gr_grouped_sum, gr_grouped_mean], axis = 1)
         group_reservations_merged = pd.concat([group_reservations_merged, gr_grouped_mode], axis = 1)
         group_reservations_merged = pd.concat([group_reservations_merged, gr_grouped_first], axis = 1)
@@ -294,9 +294,9 @@ class DataPreprocessingToolkit(object):
         #group_reservations_merged = pd.merge(group_reservations_merged, grouped_res_id, on='group_id', how='left')
         
         #display(group_reservations_merged.head(10))
-        """
-        group_reservations = pd.concat([gr_grouped_sum, gr_grouped_mean, gr_grouped_mode, gr_grouped_first], axis = 1)
         
+        group_reservations = pd.concat([gr_grouped_sum, gr_grouped_mean, gr_grouped_mode, gr_grouped_first], axis = 1)
+        """
         df = pd.concat([non_group_reservations, group_reservations], axis = 0)
         
         display(df.head(20))
